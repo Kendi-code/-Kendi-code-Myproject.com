@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothing Brand | About</title>
+    <link rel="stylesheet" href="{% static 'store_app/css/style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Clothing Brand</h1>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'shop' %}">Shop</a>
+        <a href="{% url 'about' %}">About</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>About Us</h2>
+    <p>Clothing Brand is committed to providing stylish and high-quality apparel for all ages.  
+       Our mission is to make fashion accessible and affordable without compromising quality.</p>
+</div>
+
+<footer>
+    &copy; 2026 Clothing Brand. All rights reserved.
+</footer>
+</body>
+</html>

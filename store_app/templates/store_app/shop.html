@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothing Brand | Shop</title>
+    <link rel="stylesheet" href="{% static 'store_app/css/style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Clothing Brand</h1>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'shop' %}">Shop</a>
+        <a href="{% url 'about' %}">About</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Our Products</h2>
+    {% for product in products %}
+        <div class="product">
+            <h3>{{ product.name }}</h3>
+            <p>Price: ${{ product.price }}</p>
+        </div>
+    {% empty %}
+        <p>No products available.</p>
+    {% endfor %}
+</div>
+
+<footer>
+    &copy; 2026 Clothing Brand. All rights reserved.
+</footer>
+</body>
+</html>
